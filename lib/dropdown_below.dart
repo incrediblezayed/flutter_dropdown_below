@@ -596,13 +596,11 @@ class _DropdownBelowState<T> extends State<DropdownBelow<T>>
         height: widget.boxHeight,
         child:
         widget.icon == null ?
-        Expanded(
-          child: new IndexedStack(
+        IndexedStack(
             index: _selectedIndex ?? hintIndex,
             alignment: AlignmentDirectional.centerStart,
             children: items,
-          ),
-        ):
+          ):
         new Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
